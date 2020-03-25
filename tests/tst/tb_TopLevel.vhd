@@ -39,6 +39,17 @@ begin
       wait until clk'event and clk='0';
       assert(o = x"0001")  report "Falha" severity error;
 
+      -------------------------
+
+      wait until clk'event and clk='0';
+      assert(o = x"AA02")  report "Falha" severity error;
+
+      wait until clk'event and clk='0';
+      assert(o = x"AA01")  report "Falha" severity error;
+
+      wait until clk'event and clk='0';
+      assert(o = x"55FE")  report "Falha" severity error;
+
       test_runner_cleanup(runner); -- Simulation ends here
 
       wait;
